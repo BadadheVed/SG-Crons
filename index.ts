@@ -9,7 +9,7 @@ async function runCrons() {
   await clientCrons.PublicKeyCron();
   await clientCrons.updateClientCron();
   await clientCrons.ClientStatusCron();
-  console.log("All crons executed.");
+  console.log("All crons executed, At", new Date().toISOString());
 }
 
 runCrons();
