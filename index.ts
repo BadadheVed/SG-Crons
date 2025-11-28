@@ -1,7 +1,7 @@
 import { getHealthCron } from "@/crons/health";
 import * as clientCrons from "@/crons/clients";
 
-async function runCrons() {
+export async function runCrons() {
   await getHealthCron();
   await clientCrons.getClientCron();
   await clientCrons.postClientCron();
